@@ -151,6 +151,30 @@ label {
   display: inline-block;
 }
 
+.tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--paper-dim);
+  padding: 6px;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+
+.tabs button {
+  flex: 1;
+  min-height: 52px;
+  border-radius: calc(var(--radius) - 4px);
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.tabs button.active {
+  background: var(--card);
+  color: var(--ledger);
+  box-shadow: var(--shadow);
+}
+
 .receipt {
   border: 2px dashed var(--line);
   border-radius: var(--radius);
