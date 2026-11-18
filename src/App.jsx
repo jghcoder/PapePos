@@ -8,6 +8,7 @@ import POS from './pages/POS.jsx'
 import Products from './pages/admin/Products.jsx'
 import GenerateQR from './pages/admin/GenerateQR.jsx'
 import Stats from './pages/admin/Stats.jsx'
+import Monographs from './pages/admin/Monographs.jsx'
 
 function RequireAuth({ children }) {
   const { user } = useAuth()
@@ -62,6 +63,14 @@ export default function App() {
           element={
             <RequireAuth>
               <Stats />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/monografias"
+          element={
+            <RequireAuth>
+              <Monographs />
             </RequireAuth>
           }
         />
